@@ -11,5 +11,17 @@ export default function randomBackground() {
   /**
    ********@switchButtons
    */
-  
+  let swt = document.querySelectorAll(".random-backgrounds span");
+  let backgroundInterval;
+  let backgroundOption = true;
+
+  swt.forEach((span) => {
+    span.addEventListener("click", (e) => {
+      e.target.parentElement.querySelectorAll(".active").forEach((e) => {
+        e.classList.remove("active");
+      });
+      console.log(e.parentElement.child);
+      e.target.classList.add("active");
+    });
+  });
 }
