@@ -1,7 +1,7 @@
 /* ==========[START IMPORTING]========== */
 
 //random background
-import rand from "./random.js";
+import rand from "./random2.js";
 rand();
 /**
 @example
