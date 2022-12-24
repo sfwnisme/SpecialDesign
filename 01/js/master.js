@@ -1,3 +1,18 @@
+/* ==========[START IMPORTING]========== */
+
+//random background
+import rand from "./random.js";
+rand();
+/**
+@example
+*/
+/**
+ * * this Is important comment
+ * ? todo
+ * 
+ *  */
+/* ==========[END IMPORTING]========== */
+
 /* ==========[START Check LocalStorage Colors]========== */
 
 let mainColors = localStorage.getItem("color_option");
@@ -13,22 +28,6 @@ if (mainColors !== null) {
 }
 
 /* ==========[END Check LocalStorage Colors]========== */
-
-/* ==========[START Random Background]========== */
-function randomBackGround() {
-  let bg = document.querySelector(".landing-page");
-  let imgsArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.png"];
-  setInterval(() => {
-    let randomImg = Math.floor(Math.random() * imgsArr.length);
-    console.log(randomImg);
-
-    // bg.style.backgroundImage = `url("../imgs/${imgsArr[randomImg]}")`;
-    bg.style.backgroundImage = 'url("../imgs/' + imgsArr[randomImg] + '")';
-  }, 10000);
-}
-randomBackGround();
-
-/* ==========[END Random Background]========== */
 
 /* ==========[START Setting Box]========== */
 

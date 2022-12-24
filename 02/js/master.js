@@ -34,7 +34,7 @@ function radnomize() {
 radnomize();
 
 // random background option
-const yesBg = document.querySelectorAll;
+// const yesBg = document.querySelectorAll;
 const bg = document.querySelectorAll(".random-backgrounds span");
 bg.forEach((span) => {
   span.addEventListener("click", (e) => {
