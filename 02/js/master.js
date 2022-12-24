@@ -4,7 +4,7 @@ if (mainColor !== null) {
   console.log("main color data has saved");
   document.documentElement.style.setProperty("--main-color", mainColor);
 
-  document.querySelectorAll("color-list li").forEach((element) => {
+  document.querySelectorAll(".colors-list li").forEach((element) => {
     element.classList.remove("active");
     if (element.dataset.color == mainColor) {
       element.classList.add("active");
@@ -15,17 +15,41 @@ if (mainColor !== null) {
 /* ==========[END Check LocalStorage Colors]========== */
 
 /* ==========[START Random Background]========== */
-function randomBackGround() {
-  let bg = document.querySelector(".landing-page");
-  let imgsArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.png"];
-  setInterval(() => {
-    let randomImg = Math.floor(Math.random() * imgsArr.length);
+let backgroundOption = true;
+let backgroundInterval;
 
-    bg.style.backgroundImage = `url("../imgs/${imgsArr[randomImg]}")`;
-    // bg.style.backgroundImage = 'url("../imgs/' + imgsArr[randomImg] + '")';
-  }, 10000);
+function radnomize() {
+  if (backgroundOption === true) {
+    let bg = document.querySelector(".landing-page");
+    let imgsArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+    backgroundInterval = setInterval(() => {
+      let randomImg = Math.floor(Math.random() * imgsArr.length);
+      bg.style.backgroundImage = `url("imgs/${imgsArr[randomImg]}")`;
+      // bg.style.backgroundImage = 'url("imgs/' + imgsArr[randomImg] + '")';
+    }, 100);
+  } else {
+    clearInterval(backgroundInterval);
+  }
 }
-randomBackGround();
+radnomize();
+
+// random background option
+const yesBg = document.querySelectorAll;
+const bg = document.querySelectorAll(".random-backgrounds span");
+bg.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    e.target.parentElement.querySelectorAll(".active").forEach((e) => {
+      e.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    if (e.target.dataset.background === "yes") {
+      backgroundOption = true;
+    } else {
+      backgroundOption = false;
+      clearInterval(backgroundInterval);
+    }
+  });
+});
 
 /* ==========[END Random Background]========== */
 
@@ -54,14 +78,13 @@ liColor.forEach((li) => {
     document.documentElement.style.setProperty(
       "--main-color",
       e.target.dataset.color
-      );
-      console.log(e.x)
+    );
+    console.log(e.x);
     localStorage.setItem("color_option", e.target.dataset.color);
     e.target.parentElement
       .querySelectorAll(".active")
       .forEach((e) => e.classList.remove("active"));
     e.target.classList.add("active");
   });
-  
 });
 /* ==========[END Switch Color]========== */
