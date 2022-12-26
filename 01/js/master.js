@@ -6,9 +6,10 @@ colors();
 //random background
 import randomBackground from "./extensions/random-background.js";
 randomBackground();
-/**
-@example
-*/
+
+//animation onscroll
+import animationOnScroll from "./extensions/animation-onscroll.js";
+// animationOnScroll();
 
 /* ==========[END IMPORTING]========== */
 
