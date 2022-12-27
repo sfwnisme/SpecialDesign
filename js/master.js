@@ -9,7 +9,7 @@ randomBackground();
 
 //animation onscroll
 import animationOnScroll from "./extensions/animation-onscroll.js";
-// animationOnScroll();
+animationOnScroll();
 
 /* ==========[END IMPORTING]========== */
 
