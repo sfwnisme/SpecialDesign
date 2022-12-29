@@ -1,35 +1,15 @@
-// export default function animate() {
-//   console.log("Animation On Scroll");
-//   let skills = document.querySelector(".skills");
-//   let prog = document.querySelectorAll(".skill-progress span");
-//   console.log(prog);
-//   window.onscroll = function () {
-//     if (window.scrollY >= skills.offsetTop - 300) {
-//       console.log(`%cscrollY=> ${this.scrollY}`, `color: green;`);
-//       console.log(`%cpageYOffset=> ${this.pageYOffset}`, `color: red;`);
-//       prog.forEach((span) => {
-//         span.style.width = span.dataset.progress;
-//       });
-//     } else {
-//       prog.forEach((span) => {
-//         span.style.width = 0;
-//       });
-//     }
-//   };
-// }
-
 /*NEW
-  [] clientHeight = innerHeight
-  [] clientWidth = innerWidth
-  [] scrollY === pageYOffset
-  [] scrollX === pageXOffset
+  [x] clientHeight = innerHeight
+  [x] clientWidth = innerWidth
+  [x] scrollY === pageYOffset
+  [x] scrollX === pageXOffset
 */
 
 /*TODO
-  [] offseTop => top point of the element
-  [] offsetHeight => the height of the element
-  [] innerHeight => the height of the visual page => browser site content
-  [] pageYOffset or scrollY => the height of the window scrollY
+  [x] offseTop => top point of the element
+  [x] offsetHeight => the height of the element
+  [x] innerHeight => the height of the visual page => browser site content
+  [x] pageYOffset or scrollY => the height of the window scrollY
 */
 
 /* ==========[Elzero Solutoin]========== */

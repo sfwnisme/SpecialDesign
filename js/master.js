@@ -11,6 +11,10 @@ randomBackground();
 import animationOnScroll from "./extensions/animation-onscroll.js";
 animationOnScroll();
 
+//open image
+import openImage from "./extensions/open_image.js";
+openImage();
+
 /* ==========[END IMPORTING]========== */
 
 // /* ==========[START Setting Box]========== */
