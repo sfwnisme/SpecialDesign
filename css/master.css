@@ -457,7 +457,11 @@ ox {
   cursor: pointer;
   font-weight: bold;
   font-family: Arial, Tahoma;
-  border-radius: 50%;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
 }
 /* End Gallery */
 /* Start Timeline */

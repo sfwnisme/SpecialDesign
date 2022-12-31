@@ -15,6 +15,10 @@ animationOnScroll();
 import openImage from "./extensions/open_image.js";
 openImage();
 
+// bullets
+import bullets from "./extensions/bullets.js";
+bullets();
+
 /* ==========[END IMPORTING]========== */
 
 // /* ==========[START Setting Box]========== */

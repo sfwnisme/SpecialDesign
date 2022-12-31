@@ -29,6 +29,11 @@ export default function openImage() {
         overlay.remove();
       });
 
+      // reomve on clicking any where
+      overlay.addEventListener("click", () => {
+        overlay.remove();
+      });
+
       //append
       popBox.append(popImg);
       popBox.append(x);
