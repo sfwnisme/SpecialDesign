@@ -1,6 +1,6 @@
 export default function openImage() {
-  const img = document.querySelectorAll(".images-box img");
-  img.forEach((img) => {
+  const imgs = document.querySelectorAll(".images-box img");
+  imgs.forEach((img) => {
     img.addEventListener("click", (e) => {
       const overlay = document.createElement("div");
       overlay.className = "popup-overlay";
@@ -14,9 +14,12 @@ export default function openImage() {
       popImg.src = e.target.src;
 
       // Alt
-      const alt = document.createElement("h3");
-      alt.className = "alt";
-      alt.innerText = e.target.alt;
+      if (img.alt !== null) {
+        const alt = document.createElement("h3");
+        alt.className = "alt";
+        alt.innerText = e.target.alt;
+        popBox.append(alt);
+      }
 
       // closing image action
       const x = document.createElement("span");
@@ -28,8 +31,7 @@ export default function openImage() {
 
       //append
       popBox.append(popImg);
-      popBox.append(alt);
-      overlay.append(x);
+      popBox.append(x);
       overlay.append(popBox);
       document.body.append(overlay);
     });
