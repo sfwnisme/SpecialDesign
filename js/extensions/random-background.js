@@ -10,9 +10,6 @@ export default function randomBox() {
 */
   let background_option = localStorage.getItem("background_option");
   if (localStorage.getItem("background_option") !== null) {
-    console.log("localStorage Not Empty");
-    console.log(typeof background_option);
-    console.log(background_option);
     if (background_option === "true") {
       backgroundOption = true;
     } else {
@@ -62,10 +59,11 @@ export default function randomBox() {
   function options() {
     option.forEach((span) => {
       span.addEventListener("click", (e) => {
-        e.target.parentElement.querySelectorAll(".active").forEach((x) => {
-          x.classList.remove("active");
-        });
-        e.target.classList.add("active");
+        // e.target.parentElement.querySelectorAll(".active").forEach((x) => {
+        //   x.classList.remove("active");
+        // });
+        // e.target.classList.add("active");
+        active(e);
         if (e.target.dataset.background === "yes") {
           backgroundOption = true;
           randomImage();
@@ -79,4 +77,12 @@ export default function randomBox() {
     });
   }
   options();
+}
+
+/* ==========[Active option function] */
+function active(atv) {
+  atv.target.parentElement.querySelectorAll(".active").forEach((x) => {
+    x.classList.remove("active");
+  });
+  atv.target.classList.add("active");
 }

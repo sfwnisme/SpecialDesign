@@ -3,10 +3,11 @@ export default function bullets() {
   let bullets = document.querySelectorAll(".nav-bullets .bullet");
   scrollToSection(links);
   scrollToSection(bullets);
+  // giv(links);
+  // giv(bullets);
 }
 
 function scrollToSection(element) {
-  console.log(".....");
   element.forEach((ele) => {
     ele.addEventListener("click", (e) => {
       e.preventDefault();
@@ -17,3 +18,19 @@ function scrollToSection(element) {
     });
   });
 }
+
+/* =====[this function works only on nav links]===== */
+// function giv(element) {
+//   let links = document.querySelectorAll(".links-container .links li a");
+//   console.log(links.innerText.toLowerCase());
+//   element.forEach((ele) => {
+//     ele.setAttribute("data-link", `.${ele.innerText.toLowerCase()}`);
+//     ele.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       let data = document.querySelector(e.target.dataset.link);
+//       data.scrollIntoView({
+//         behavior: "smooth",
+//       });
+//     });
+//   });
+// }

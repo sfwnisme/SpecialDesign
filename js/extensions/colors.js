@@ -24,18 +24,22 @@ export default function colors() {
   .................
   */
   let colorContainer = document.querySelectorAll(".colors-list li");
-  console.log(colorContainer);
   colorContainer.forEach((li) => {
     li.addEventListener("click", (e) => {
       document.documentElement.style.setProperty(
         "--main-color",
         e.target.dataset.color
       );
-      e.target.parentElement.querySelectorAll(".active").forEach((e) => {
-        e.classList.remove("active");
-      });
-      e.target.classList.add("active");
+      active(e);
       window.localStorage.setItem("color-option", e.target.dataset.color);
     });
   });
+}
+
+/* ==========[Active option function] */
+function active(atv) {
+  atv.target.parentElement.querySelectorAll(".active").forEach((x) => {
+    x.classList.remove("active");
+  });
+  atv.target.classList.add("active");
 }

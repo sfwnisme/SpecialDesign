@@ -297,42 +297,42 @@ body {
 }
 /* End Landing Page */
 /* Start About Us */
-.about-us {
+.about {
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
 }
 @media (max-width: 767px) {
-  .about-us {
+  .about {
     display: block;
     text-align: center;
   }
 }
-.about-us .info-box {
+.about .info-box {
   flex: 1;
   padding: 30px;
 }
 @media (max-width: 767px) {
-  .about-us .info-box {
+  .about .info-box {
     padding: 0;
   }
 }
-.about-us .info-box h2 {
+.about .info-box h2 {
   font-weight: bold;
   font-size: 30px;
   color: var(--main-color);
   margin: 0 0 10px;
 }
-.about-us .info-box p {
+.about .info-box p {
   line-height: 1.8;
   color: #767676;
   margin: 0;
 }
-.about-us .image-box {
+.about .image-box {
   flex: 1;
   text-align: center;
 }
-.about-us .image-box img {
+.about .image-box img {
   width: 250px;
 }
 /* End About Us */

@@ -45,8 +45,6 @@
 
 /* ==========[My Solutoin]========== */
 export default function animate() {
-  console.log("Animation On Scroll");
-
   window.addEventListener("scroll", () => {
     let skills = document.querySelector(".skills");
     let prog = document.querySelectorAll(".skill-progress span");
