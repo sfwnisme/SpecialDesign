@@ -19,6 +19,10 @@ openImage();
 import bullets from "./extensions/bullets.js";
 bullets();
 
+// resetOption
+import resetOption from "./extensions/reset.js";
+resetOption();
+
 /* ==========[END IMPORTING]========== */
 
 // /* ==========[START Setting Box]========== */
