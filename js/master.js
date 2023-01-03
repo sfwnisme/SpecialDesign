@@ -23,6 +23,10 @@ bullets();
 import resetOption from "./extensions/reset.js";
 resetOption();
 
+// nav
+import nav from "./extensions/nav.js";
+nav();
+
 /* ==========[END IMPORTING]========== */
 
 // /* ==========[START Setting Box]========== */
